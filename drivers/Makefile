@@ -184,3 +184,5 @@ obj-$(CONFIG_FSI)		+= fsi/
 obj-$(CONFIG_TEE)		+= tee/
 obj-$(CONFIG_MULTIPLEXER)	+= mux/
 obj-$(CONFIG_GNSS)		+= gnss/
+obj-$(CONFIG_MMI_ANNOTATE)	+= mmi_annotate/
+obj-$(CONFIG_MMI_INFO)		+= mmi_info/

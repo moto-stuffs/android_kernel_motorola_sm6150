@@ -83,4 +83,4 @@ $(obj)/lkdtm_rodata_objcopy.o: $(obj)/lkdtm_rodata.o FORCE
 obj-$(CONFIG_INPUT_AWINIC_HAPTIC) += awinic/
 obj-$(CONFIG_MMI_SYS_TEMP) += mmi_sys_temp/
 obj-$(CONFIG_INPUT_ABOV_A96T) += abov_a96t/
-
+obj-$(CONFIG_INPUT_ABOV_MMI_OVERLAY) += abov_mmi_overlay/

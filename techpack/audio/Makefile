@@ -15,14 +15,6 @@ ifeq ($(CONFIG_ARCH_SDXPOORWILLS), y)
 include $(srctree)/techpack/audio/config/sdxpoorwillsauto.conf
 export $(shell sed 's/=.*//' $(srctree)/techpack/audio/config/sdxpoorwillsauto.conf)
 endif
-ifeq ($(CONFIG_ARCH_SM6150), y)
-include $(srctree)/techpack/audio/config/sm6150auto.conf
-export $(shell sed 's/=.*//' $(srctree)/techpack/audio/config/sm6150auto.conf)
-endif
-ifeq ($(CONFIG_ARCH_SDMMAGPIE), y)
-include $(srctree)/techpack/audio/config/sm6150auto.conf
-export $(shell sed 's/=.*//' $(srctree)/techpack/audio/config/sm6150auto.conf)
-endif
 ifeq ($(CONFIG_ARCH_SM8150), y)
 include $(srctree)/techpack/audio/config/sm8150auto.conf
 export $(shell sed 's/=.*//' $(srctree)/techpack/audio/config/sm8150auto.conf)
@@ -33,7 +25,7 @@ export $(shell sed 's/=.*//' $(srctree)/techpack/audio/config/sm8150auto.conf)
 endif
 ifeq ($(CONFIG_ARCH_SM6150), y)
 include $(srctree)/techpack/audio/config/sm6150auto.conf
-export
+export $(shell sed 's/=.*//' $(srctree)/techpack/audio/config/sm6150auto.conf)
 endif
 
 # Use USERINCLUDE when you must reference the UAPI directories only.
@@ -61,14 +53,6 @@ endif
 ifeq ($(CONFIG_ARCH_SDXPOORWILLS), y)
 LINUXINCLUDE    += \
                 -include $(srctree)/techpack/audio/config/sdxpoorwillsautoconf.h
-endif
-ifeq ($(CONFIG_ARCH_SM6150), y)
-LINUXINCLUDE    += \
-                -include $(srctree)/techpack/audio/config/sm6150autoconf.h
-endif
-ifeq ($(CONFIG_ARCH_SDMMAGPIE), y)
-LINUXINCLUDE    += \
-                -include $(srctree)/techpack/audio/config/sm6150autoconf.h
 endif
 ifeq ($(CONFIG_ARCH_SM8150), y)
 LINUXINCLUDE    += \
